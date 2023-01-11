@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body{
+        background: url('static/images/bg7.jpg') no-repeat; 
+        background-size: cover;
+        color: whitesmoke;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: gray;
+            color: white;
+        }
+</style>
+<body>
+        <b>
+        <div class="topnav">
+                <a class="active" href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('heartstrokeprediction') }}">Prediction</a>
+                <a href="{{ url_for('about') }}">About</a>
+        </div><br><br></b>
+        <h1 style="text-align: left;text-align: center;"><b>Prediction of Heart Stroke</b></h1>
+        <center>
+        <div style="border-style: solid; width: 390px;
+        height: 460px;text-align: left; ">
+        <form method="POST" action="{{ url_for('Prediction') }}">
+        <b>
+        <label for="name"><b>Name:</b></label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="gender"><b>Gender:</b></label>
+        <input type="radio" id="male"  name="gender" value="Male">
+        <label for="male"><b>Male</b></label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female"><b>Female</b></label>
+        <input type="radio" id="other"  value="other">
+        <label for="other">Others</label><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="hypertension">Hypertension:</label>
+        <input type="radio" id="yes"  name="hypertension" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="hypertension" value="No">
+        <label for="no">No</label><br><br>
+
+        <label for="heartdisease">Heart Disease:</label>
+        <input type="radio" id="yes1" name="heartdisease" value="yes">
+        <label for="yes1">Yes</label>
+        <input type="radio" id="no1" name="heartdisease" value="No">
+        <label for="no1">No</label><br><br>
+
+        <label for="marriedstatus">Maried Status:</label>
+        <input type="radio" id="married" name="marriedstatus" value="married">
+        <label for="married">Married</label>
+        <input type="radio" id="notmarried" name="marriedstatus" value="notmarried">
+        <label for="notmarried">Not Married</label><br><br>
+
+        <label for="employement">Employment:</label>
+        <select name="employment" id="employement">
+        <option>-- Select Employement -- </option>
+        <option value="private">Private</option>
+        <option value="selfemployed">Self-employed</option>
+        <option value="govt_job">Government</option>
+        <option value="childern">Studying</option>
+        <option value="neverworked">Never Worked</option>
+        </select><br><br>
+
+        <label for="residencetype">Residence:</label>
+        <input type="radio" id="urban" name="residencetype" value="urban">
+        <label for="urban">Urban</label>
+        <input type="radio" id="rural" name="residencetype" value="rural">
+        <label for="rural">Rural</label><br><br>
+
+        <label for="glucoselevel">Glucose Level:</label>
+        <input type="text" id="glucoselevel" name="glucoselevel"><br><br>
+
+        <label for="bmi">BMI:</label>
+        <input type="text" id="bmi" name="bmi"><br><br>
+
+        <label for="smoking">Smoking Status:</label>
+        <select name="smoking" id="smoking">
+        <option>-- Select Smoking Status -- </option>
+        <option value="formerly">Formerly Smoked</option>
+        <option value="Never">Never Smoked</option>
+        <option value="smokes">Smokes</option>
+        <option value="unknown">Unknown</option>
+        </select><br><br>
+
+        <center><button type="submit">Predict</button></center>
+        </b>
+    </form>
+    </div>
+    </center>
+</body>
+</html>

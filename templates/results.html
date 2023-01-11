@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-image: url('static/images/bg7.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: -1px -1px;
+            color: white;
+        }
+
+        .topnav a {
+            float: left;
+            color: #080606;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: gray;
+            color: white;
+        }
+
+    </style>
+    <body>
+        <b>
+        <div class="topnav">
+            <a class="active" href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('heartstrokeprediction') }} ">Prediction</a>
+            <a href="{{ url_for('about') }}">About</a>
+          </div><br><br>
+
+          <h1 class="text-center"><b>{{ Name }} you have a chance of Heart Stroke is <i>{{ prediction }}</i></b></h1>
+        </b>
+    </body>
+</html>

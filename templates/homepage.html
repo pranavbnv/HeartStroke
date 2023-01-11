@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-image: url('static/images/bg7.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+           /* background-position: 0px -50px;*/
+            text-align: center;
+            color: white;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: gray ;
+            color:white;
+        }
+
+    </style>
+    <body>
+        <b>
+        <div class="topnav">
+            <a class="active" href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('heartstrokeprediction') }}">Prediction</a>
+            <a href="{{ url_for('about') }}">About</a>
+          </div><br><br>
+        <p style="text-align:center;">
+            <h1 >STROKE SYMPTOMS</h1>
+            <h3>Sudden dim vision, especially in one eye</h3>
+            <h3 >Sudden weakness or numbness on one side of your face or in one arm or leg</h3>
+            <h3 >Loss of vision, strength, coordination, sensation, or speech, or trouble understanding speech.</h3>
+    
+            <h3>Sudden loss of balance, sometimes along with vomiting, nausea, fever, hiccups, or trouble swallowing</h3>
+            
+            <h3>Sudden and severe headache with no other cause, followed quickly by passing out</h3>
+            <h3>Dizziness or sudden falls with no clear cause</h3>
+            <h2>TIME TO ANALYSIS</h2><br>
+        </p>
+        </b>
+    </body>
+</html>
